@@ -6,7 +6,7 @@
 </p>
 <p>
 <label>Telefone:</label>
-<input  class="btn btn-success" name="nome">
+<input  class="btn btn-success" name="telefone">
 </p>
 <p>
 <label>Data de Nascimento:</label>
