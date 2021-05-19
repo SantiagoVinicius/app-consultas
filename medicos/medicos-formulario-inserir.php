@@ -2,17 +2,17 @@
 
 <form name="formulario-inserir-medicos" method="post" action="medicos-inserir.php">
     <p>
-        <label>Nome:</label><input name="nome">
+        <label>Nome: </label><br><input class="btn btn-success" name="nome">
     </p>
     <p>
-        <label>Telefone:</label><input name="telefone">
+        <label>Telefone: </label><br><input class="btn btn-success" name="telefone">
     </p>
     <p>
-        <label>CRM:</label><input name="crm">
+        <label>CRM: </label><br><input class="btn btn-success" name="crm">
     </p>
     <p>
         <label>Especialidade:</label>
-        <select name="especialidade">
+        <select class="btn btn-success" name="especialidade">
             <option value="Cardiologista">Cardiologista</option>
             <option value="Pediatra">Pediatra</option>
             <option value="Ortopedista">Ortopedista</option>
@@ -20,7 +20,7 @@
         </select>
         </p>
         <p>
-            <button type="subtmit">Salvar</button>
+            <button type="subtmit" class="btn btn-success">Salvar</button>
         </p>
     </form>
 <?php include "../includes/rodape.php" ; ?>

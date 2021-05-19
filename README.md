@@ -45,3 +45,6 @@ CREATE TABLE `bd_consultorio`.`TB_MEDICOS` (
 ) 
 ENGINE = InnoDB;
 ```
+### Criação da tabela pacientes 
+``` sql
+INSERT INTO `tb_pacientes` (`id`, `nome`, `telefone`, `data_nascimento`, `convenio`, `diagnostico`) VALUES (NULL, 'Laís Moura', '(14)55266-9008', '1999-01-02', 'Não', 'Não Sabe');
