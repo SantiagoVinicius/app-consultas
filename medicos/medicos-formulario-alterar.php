@@ -12,7 +12,7 @@ while($medico = mysqli_fetch_assoc($listaDeMedicos)){
 }
 ?>
 
-<form name="formulario-inserir-medicos" method="post" action="medicos-inserir.php">
+<form name="formulario-inserir-medicos" method="post" action="medicos-alterar.php">
     <input type="hidden" name="id_medico" value="<?php echo $id_medico;?>">
     <div class="row">
     <p class="col-6">
