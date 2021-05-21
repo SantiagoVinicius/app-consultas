@@ -8,7 +8,7 @@
     <link href="../css/estilo.css" rel="stylesheet">
     <link href="../bootstrap5/css/bootstrap.css" rel="stylesheet">
 </head>
-<body class="bg-secondary">
+<body class="bg-dark">
     <main class="container">
         <header>
             <h1>APP Consultas</h1>

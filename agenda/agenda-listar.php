@@ -34,7 +34,7 @@ while($agenda = mysqli_fetch_assoc($listaDeAgenda)){
     echo "<td>{$agenda['nome_medico']}</td>";
     echo "<td>{$agenda['sala']}</td>";
     echo "<td>{$agenda['nome_paciente']}</td>";
-    echo "<td> <a href='agenda-formulario-alterar.php?id_agenda={$agenda['id']}'>Alterar |<a href='agenda-excluir.php?id_agenda={$agenda['id']}'> Excluir</td>";
+    echo "<td> <a type='button' class='btn btn-outline-success' href='agenda-formulario-alterar.php?id_agenda={$agenda['id']}'>Alterar <a type='button' class='btn btn-outline-success' href='agenda-excluir.php?id_agenda={$agenda['id']}'> Excluir</td>";
     echo "</tr>";
 }?>
 </table>

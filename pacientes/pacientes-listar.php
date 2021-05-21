@@ -32,8 +32,8 @@ $listaDePacientes = mysqli_query($conexao, $sqlBusca);
         echo "<td>{$dataBrasil}</td>";
 
         echo "<td>{$paciente['convenio']}</td>";
-        echo "<td><a href='pacientes-formulario-alterar.php?id={$paciente['id']}'>Alterar</a> | ";
-        echo "<a href='pacientes-excluir.php?id={$paciente['id']}'>Excluir</a></td>";
+        echo "<td><a type='button' class='btn btn-outline-danger' href='pacientes-formulario-alterar.php?id={$paciente['id']}'>Alterar</a>  ";
+        echo "<a type='button' class='btn btn-outline-danger' href='pacientes-excluir.php?id={$paciente['id']}'>Excluir</a></td>";
         echo "</tr>";
     }
     ?>
