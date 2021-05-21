@@ -16,17 +16,17 @@ while($medico = mysqli_fetch_assoc($listaDeMedicos)){
     <input type="hidden" name="id_medico" value="<?php echo $id_medico;?>">
     <div class="row">
     <p class="col-6">
-        <label class="form-label">Nome: </label><br><input name="nome" class="form-control btn btn-success"  value="<?php echo $nome;?>">
+        <label class="form-label">Nome: </label><br><input name="nome" class="form-control btn btn-primary"  value="<?php echo $nome;?>">
     </p>
     <p class="col-6">
-        <label class="form-label">Telefone: </label><br><input name="telefone" class="form-control btn btn-success" value="<?php echo $telefone;?>">
+        <label class="form-label">Telefone: </label><br><input name="telefone" class="form-control btn btn-primary" value="<?php echo $telefone;?>">
     </p>
     <p class="col-6">
-        <label class="form-label">CRM: </label><br><input name="crm" class="form-control btn btn-success" value="<?php echo $crm;?>">
+        <label class="form-label">CRM: </label><br><input name="crm" class="form-control btn btn-primary" value="<?php echo $crm;?>">
     </p>
     <p class="col-6">
         <label class="form-label">Especialidade:</label>
-        <select name="especialidade" class="form-select btn btn-success">
+        <select name="especialidade" class="form-select btn btn-primary">
             <option value="Cardiologista"<?php if($especialidade == 'Cardiologista'){echo "selected";}?>>Cardiologista</option>
             <option value="Pediatra"<?php if($especialidade == 'Pediatra'){echo "selected";}?>>Pediatra</option>
             <option value="Ortopedista"<?php if($especialidade == 'Ortopedista'){echo "selected";}?>>Ortopedista</option>
@@ -34,7 +34,7 @@ while($medico = mysqli_fetch_assoc($listaDeMedicos)){
         </select>
         </p>
         <p>
-            <button type="subtmit" class="btn btn-success">Salvar</button>
+            <button type="subtmit" class="btn btn-primary">Salvar</button>
         </p>
     </form>
 <?php include "../includes/rodape.php" ; ?>

@@ -12,8 +12,8 @@ $sqlBusca = "SELECT
                 inner join tb_pacientes on tb_agenda.id_paciente = tb_pacientes.id
                 inner join tb_medicos on tb_agenda.id_medico = tb_medicos.id";     
 $listaDeAgenda = mysqli_query($conexao , $sqlBusca);
-?>
-<a href="agenda-formulario-inserir.php"><p>Nova Consulta</a></p>
+?><hr>
+<a href="agenda-formulario-inserir.php" class=" btn btn-success">Nova Consulta</a>
 <table class="table table-hover">
     <tr>
         <th>ID</th>
@@ -34,7 +34,7 @@ while($agenda = mysqli_fetch_assoc($listaDeAgenda)){
     echo "<td>{$agenda['nome_medico']}</td>";
     echo "<td>{$agenda['sala']}</td>";
     echo "<td>{$agenda['nome_paciente']}</td>";
-    echo "<td>Alterar | Excluir</td>";
+    echo "<td> <a href='agenda-formulario-alterar.php?id_agenda={$agenda['id']}'>Alterar |<a href='agenda-excluir.php?id_agenda={$agenda['id']}'> Excluir</td>";
     echo "</tr>";
 }?>
 </table>

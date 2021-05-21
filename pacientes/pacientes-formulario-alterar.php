@@ -23,15 +23,15 @@ while($paciente = mysqli_fetch_assoc($listaDePacientes)){
 <input name="id_paciente" type="hidden" value="<?php echo $id_paciente;?>">
 <p>
     <label>Nome:</label>
-    <input class="btn btn-success" name="nome" value="<?php echo $nome ;?>">
+    <input class="btn btn-danger" name="nome" value="<?php echo $nome ;?>">
 </p>
 <p>
 <label>Telefone:</label>
-<input  class="btn btn-success" name="telefone" value="<?php echo $telefone;?>">
+<input  class="btn btn-danger" name="telefone" value="<?php echo $telefone;?>">
 </p>
 <p>
 <label>Data de Nascimento:</label>
-<input  class="btn btn-success" name="data_nascimento" type="date"  value="<?php echo $data_nascimento;?>">
+<input  class="btn btn-danger" name="data_nascimento" type="date"  value="<?php echo $data_nascimento;?>">
 </p>
 <p>
 <label>Convênio:</label>
@@ -45,10 +45,10 @@ if($convenio == "sim"){
 </p>
 <p>
 <label>Diagnóstico:</label>
-<textarea class="btn btn-success" name="diagnostico" ><?php echo $diagnostico ;?></textarea>
+<textarea class="btn btn-danger" name="diagnostico" ><?php echo $diagnostico ;?></textarea>
 </p>
 <p>
-<button class="btn btn-success" type="submit">Salvar</button>
+<button class="btn btn-danger" type="submit">Salvar</button>
 </p>
 
 

@@ -2,15 +2,15 @@
 <form name="formulario-pacientes" method="post" action="pacientes-inserir.php">
 <p>
     <label>Nome:</label>
-    <input class="btn btn-success" name="nome">
+    <input class="btn btn-danger" name="nome">
 </p>
 <p>
 <label>Telefone:</label>
-<input  class="btn btn-success" name="telefone">
+<input  class="btn btn-danger" name="telefone">
 </p>
 <p>
 <label>Data de Nascimento:</label>
-<input  class="btn btn-success" name="data_nascimento" type="date">
+<input  class="btn btn-danger" name="data_nascimento" type="date">
 </p>
 <p>
 <label>Convênio:</label>
@@ -18,10 +18,10 @@
 </p>
 <p>
 <label>Diagnóstico:</label>
-<textarea class="btn btn-success" name="diagnostico"></textarea>
+<textarea class="btn btn-danger" name="diagnostico"></textarea>
 </p>
 <p>
-<button class="btn btn-success" type="submit">Salvar</button>
+<button class="btn btn-danger" type="submit">Salvar</button>
 </p>
 
 
