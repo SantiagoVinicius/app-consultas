@@ -42,12 +42,13 @@ CREATE TABLE `bd_consultorio`.`TB_MEDICOS` (
     `telefone` VARCHAR(20) NOT NULL ,  
     `crm` VARCHAR(50) NOT NULL ,  
     `especialidade` VARCHAR(50) NOT NULL ,    PRIMARY KEY  (`id`)
+	`foto` VARCHAR(200) NOT NULL 
 ) 
 ENGINE = InnoDB;
 ```
 ### Criação da tabela pacientes 
 ``` sql
-INSERT INTO `tb_pacientes` (`id`, `nome`, `telefone`, `data_nascimento`, `convenio`, `diagnostico`) VALUES (NULL, 'Laís Moura', '(14)55266-9008', '1999-01-02', 'Não', 'Não Sabe');
+INSERT INTO `tb_pacientes` (`id`, `nome`, `telefone`, `data_nascimento`, `convenio`, `diagnostico`,`foto`) VALUES (NULL, 'Laís Moura', '(14)55266-9008', '1999-01-02', 'Não', 'Não Sabe', 'img/');
 
 ### Criação da tabela agenda
 
