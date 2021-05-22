@@ -19,8 +19,7 @@ $resultado = mysqli_query($conexao , $sqlAlterar);
 
 // print_r($sqlAlterar);
 if($resultado){
-    echo "Alterado com sucesso!<br>";
-    echo "<a href='agenda-listar.php'>Voltar</a>";
+    header('Location:agenda-listar.php');
 }else{
     echo "Ocorreu algum erro";
 }

@@ -1,6 +1,6 @@
 <?php include "../includes/cabecalho.php" ; ?>
 
-<form name="formulario-inserir-medicos" method="post" action="medicos-inserir.php">
+<form name="formulario-inserir-medicos" method="post" action="medicos-inserir.php" enctype="multipart/form-data">
     <p>
         <label>Nome: </label><br><input class="btn btn-primary" name="nome">
     </p>
@@ -18,6 +18,10 @@
             <option value="Ortopedista">Ortopedista</option>
             <option value="Geneticista">Geneticista</option>
         </select>
+        </p>
+        <p>
+            <label>Foto: <label>
+            <input type="file" name="arquivo" class="btn btn-primary">
         </p>
         <p>
             <button type="subtmit" class="btn btn-primary">Salvar</button>

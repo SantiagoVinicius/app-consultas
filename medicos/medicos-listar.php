@@ -1,5 +1,23 @@
 <?php include "../includes/cabecalho.php"; ?>
 <hr>
+<?php if(isset($_GET['mensagem'])){
+        if($_GET['mensagem'] == 'cadastrado'){
+        ?> 
+        <div class="alert alert-primary">
+            Cadastrado com sucesso!
+        </div>
+        <?php
+        }
+
+        if($_GET['mensagem'] == 'excluido'){
+            ?>
+        <div class="alert alert-primary">
+        Excluído com sucesso!
+        </div>
+        <?php
+    }
+}
+    ?>
 <p>
     <a href="medicos-formulario-inserir.php" class="btn btn-primary" ><i class="bi-plus-circle"></i>Novo médico</a>
 </p>
@@ -12,6 +30,7 @@ $listaDeMedicos = mysqli_query($conexao , $sqlBusca);
 ?>
 <table class="table table-hover">
     <tr>
+        <th>Foto</th>
         <th>ID</th>
         <th>Nome</th>
         <th>Telefone</th>
@@ -22,6 +41,7 @@ $listaDeMedicos = mysqli_query($conexao , $sqlBusca);
     <?php
     while($medico = mysqli_fetch_assoc($listaDeMedicos)){
         echo "<tr>";
+        echo "<td><img src='{$medico['foto']}'></td>";
         echo "<td>{$medico['id']}</td>";
         echo "<td>{$medico['nome']}</td>";
         echo "<td>{$medico['telefone']}</td>";

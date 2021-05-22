@@ -13,20 +13,30 @@ if(isset($_POST['convenio'])){
 
 $diagnostico = $_POST['diagnostico'];
 
+$dir = "imagens/";
+$arquivo = $_FILES['arquivo'];
+$foto = $dir . $arquivo['name'];
+
+if(move_uploaded_file($arquivo['tmp_name'] , "$dir/" . $arquivo['name'])){
+    echo "Arquivo enviado com sucesso";
+}else{
+    echo "Arquivo deu erro";
+}
+
 $sqlAlterar = "UPDATE tb_pacientes SET
                 nome = '{$nome}' ,
                 telefone = '{$telefone}' ,
                 data_nascimento = '{$data_nascimento}' ,
                 convenio = '{$convenio}' ,
-                diagnostico = '{$diagnostico}' 
+                diagnostico = '{$diagnostico}' , 
+                foto = '{$foto}'
                 WHERE id = {$id_paciente}
                 ;";
 
 $resultado = mysqli_query($conexao, $sqlAlterar);
 
 if($resultado){
-    echo "Alterado com sucesso!<br>";
-    echo "<a href='pacientes-listar.php'>Voltar</a>";
+    header('Location:pacientes-listar.php');
 }else{
     echo "Algum erro aconteceu";
 }

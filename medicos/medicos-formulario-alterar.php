@@ -3,8 +3,9 @@ $id_medico = $_GET['id_medico'];
 include "../includes/conexao.php";
 $sqlBuscar = "SELECT * FROM tb_medicos WHERE id={$id_medico};";
 $listaDeMedicos = mysqli_query($conexao , $sqlBuscar);
-$none = $telefone = $crm = $especialidade = "";
+$none = $telefone = $crm = $especialidade = $foto = "";
 while($medico = mysqli_fetch_assoc($listaDeMedicos)){
+    $foto = $medico['foto'];
     $nome = $medico['nome'];
     $telefone = $medico['telefone'];
     $crm = $medico['crm'];
@@ -12,7 +13,7 @@ while($medico = mysqli_fetch_assoc($listaDeMedicos)){
 }
 ?>
 
-<form name="formulario-inserir-medicos" method="post" action="medicos-alterar.php">
+<form name="formulario-inserir-medicos" method="post" action="medicos-alterar.php" enctype="multipart/form-data">
     <input type="hidden" name="id_medico" value="<?php echo $id_medico;?>">
     <div class="row">
     <p class="col-6">
@@ -32,6 +33,10 @@ while($medico = mysqli_fetch_assoc($listaDeMedicos)){
             <option value="Ortopedista"<?php if($especialidade == 'Ortopedista'){echo "selected";}?>>Ortopedista</option>
             <option value="Geneticista"<?php if($especialidade == 'Geneticista'){echo "selected";}?>>Geneticista</option>
         </select>
+        </p>
+        <p>
+            <label>Foto: <label>
+            <input type="file" name="arquivo" class="btn btn-primary">
         </p>
         <p>
             <button type="subtmit" class="btn btn-primary">Salvar</button>

@@ -13,6 +13,26 @@ $sqlBusca = "SELECT
                 inner join tb_medicos on tb_agenda.id_medico = tb_medicos.id";     
 $listaDeAgenda = mysqli_query($conexao , $sqlBusca);
 ?><hr>
+
+<?php if(isset($_GET['mensagem'])){
+        if($_GET['mensagem'] == 'cadastrado'){
+        ?> 
+        <div class="alert alert-success">
+            Cadastrado com sucesso!
+        </div>
+        <?php
+        }
+
+        if($_GET['mensagem'] == 'excluido'){
+            ?>
+        <div class="alert alert-success">
+        Excluído com sucesso!
+        </div>
+        <?php
+    }
+}
+    ?>
+
 <a href="agenda-formulario-inserir.php" class=" btn btn-success">Nova Consulta</a>
 <table class="table table-hover">
     <tr>

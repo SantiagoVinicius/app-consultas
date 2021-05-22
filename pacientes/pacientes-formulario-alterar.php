@@ -8,9 +8,10 @@ $id_paciente = $_GET['id'];
 $sqlBusca = "SELECT * FROM tb_pacientes WHERE id = {$id_paciente}";
 $listaDePacientes = mysqli_query($conexao , $sqlBusca);
 
-$nome = $telefone = $convenio = $data_nascimento = $diagnostico = "";
+ $nome = $telefone = $convenio = $diagnostico = $data_nascimento = $foto =  "";
 
 while($paciente = mysqli_fetch_assoc($listaDePacientes)){
+    $foto = $paciente['foto'];
     $nome = $paciente['nome'];
     $telefone = $paciente['telefone'];
     $convenio = $paciente['convenio'];
@@ -19,7 +20,7 @@ while($paciente = mysqli_fetch_assoc($listaDePacientes)){
 }
 ?>
 
-<form name="formulario-pacientes" method="post" action="pacientes-alterar.php">
+<form name="formulario-pacientes" method="post" action="pacientes-alterar.php" enctype="multipart/form-data">
 <input name="id_paciente" type="hidden" value="<?php echo $id_paciente;?>">
 <p>
     <label>Nome:</label>
@@ -46,6 +47,10 @@ if($convenio == "sim"){
 <p>
 <label>Diagnóstico:</label>
 <textarea class="btn btn-danger" name="diagnostico" ><?php echo $diagnostico ;?></textarea>
+</p>
+<p>  
+<label>Foto: <label>
+<input type="file" name="arquivo" class="btn btn-danger">
 </p>
 <p>
 <button class="btn btn-danger" type="submit">Salvar</button>
