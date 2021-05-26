@@ -25,6 +25,8 @@
                 Usuário ou Senha inválido!
             </div>
             <?php
+            }else if($_GET['mensagem'] == 'login'){
+                echo "<h5>Realize Login para entrar</h5>";
             }
         }
         ?>
